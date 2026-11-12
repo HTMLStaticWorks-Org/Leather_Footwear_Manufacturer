@@ -2389,3 +2389,30 @@ body.dark .menu-btn:hover {
   color: var(--text) !important;
 }
 
+/* ==========================================================================
+   V17: 2x2 Card Alignment for Process Steps Section on 1024px Viewports
+   Applies across all pages (home-2, about, services, products, wholesale)
+   ========================================================================== */
+@media (max-width: 1050px) {
+  .process,
+  .grid.four {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+  }
+  .process .step {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .process,
+  .grid.four {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+
