@@ -2415,4 +2415,108 @@ body.dark .menu-btn:hover {
   }
 }
 
+/* ==========================================================================
+   V18: Card Text and Button Horizontal Alignment on 1024px & Responsive
+   Applies to Home 1 (The Collection) and Services (What We Provide)
+   Ensures headings, paragraphs, and CTA buttons sit in the same horizontal line
+   ========================================================================== */
+.grid.three > .card,
+.card:not(.product-card) {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.grid.three > .card > img,
+.card:not(.product-card) > img {
+  height: 245px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
+
+.grid.three > .card .card-body,
+.card:not(.product-card) .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  box-sizing: border-box !important;
+  padding: 24px !important;
+}
+
+.grid.three > .card .card-body .tag,
+.card:not(.product-card) .card-body .tag {
+  display: block !important;
+  margin-bottom: 8px !important;
+  flex: 0 0 auto !important;
+}
+
+.grid.three > .card .card-body .h3,
+.grid.three > .card .card-body h3,
+.card:not(.product-card) .card-body .h3,
+.card:not(.product-card) .card-body h3 {
+  margin: 0 0 10px !important;
+  flex: 0 0 auto !important;
+}
+
+.grid.three > .card .card-body p,
+.card:not(.product-card) .card-body p {
+  color: var(--muted) !important;
+  margin: 0 0 16px !important;
+  flex: 1 1 auto !important;
+}
+
+.grid.three > .card .card-body .link-arrow,
+.card:not(.product-card) .card-body .link-arrow {
+  margin-top: auto !important;
+  align-self: flex-start !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* 1024px tablet / desktop breakpoint */
+@media (max-width: 1050px) {
+  .grid.three > .card .card-body,
+  .card:not(.product-card) .card-body {
+    padding: 22px 18px !important;
+  }
+
+  .grid.three > .card .card-body .h3,
+  .grid.three > .card .card-body h3,
+  .card:not(.product-card) .card-body .h3,
+  .card:not(.product-card) .card-body h3 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.015em !important;
+    white-space: nowrap !important;
+  }
+
+  .grid.three > .card .card-body p,
+  .card:not(.product-card) .card-body p {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    min-height: 66px !important;
+  }
+
+  .grid.three > .card .card-body .link-arrow,
+  .card:not(.product-card) .card-body .link-arrow {
+    margin-top: auto !important;
+  }
+}
+
+/* Mobile & smaller views reset white-space */
+@media (max-width: 680px) {
+  .grid.three > .card .card-body .h3,
+  .grid.three > .card .card-body h3,
+  .card:not(.product-card) .card-body .h3,
+  .card:not(.product-card) .card-body h3 {
+    white-space: normal !important;
+    font-size: 21px !important;
+  }
+  .grid.three > .card .card-body p,
+  .card:not(.product-card) .card-body p {
+    min-height: auto !important;
+  }
+}
+
 
